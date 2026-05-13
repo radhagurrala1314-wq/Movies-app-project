@@ -1,7 +1,5 @@
 import Cookies from 'js-cookie'
-import {useNavigate, Link} from 'react-router'
-import { CiSearch } from "react-icons/ci";
-import { FaRegBell } from "react-icons/fa6"; 
+import {useNavigate, Link} from 'react-router-dom'
 
 import './index.css'
 
@@ -10,54 +8,44 @@ const Header = () => {
 
   const onClickLogout = () => {
     Cookies.remove('jwt_token')
-    navigate("/login", {replace:true})
+    navigate('/login', {replace: true})
   }
 
   return (
-    <div className="home_container"> 
-      <nav className="nav_links"> 
-        <div className="nav_card">
-          
-          <div> 
-            <img
-              src="https://tse3.mm.bing.net/th/id/OIP.xGODOGRV6qSXnzonv6laxwHaEc?pid=Api&P=0&h=180"
-              alt="Movie_Hub"
-              height="80"
-              width="130"
-              className="image"
-            /> 
-          </div> 
+    <div className="home_container">
+      <nav className="nav_links">
 
-          <ul className="unoder_links">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/movies">Movies</Link></li>
-            <li><Link to="/shows">Shows</Link></li>
-            <li><Link to="/trend">TrendingMovie</Link></li>
-        
-          </ul> 
+        <div className="logo_section">
+          <img
+            src="https://tse3.mm.bing.net/th/id/OIP.xGODOGRV6qSXnzonv6laxwHaEc?pid=Api&P=0&h=180"
+            alt="Movie_Hub"
+            height="80"
+            width="130"
+            className="image"
+          />
         </div>
 
-        <div className="icons"> 
-          <div className="logos"> 
-            
-            <div className="search_box"> 
-              <CiSearch className="search_icon" /> 
-              
-              <input
-                type="text"
-                placeholder="Titles, People"
-                className="search_input"
-              />
-            </div> 
+        <ul className="unoder_links">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
 
-            <FaRegBell /> 
+          <li>
+            <Link to="/movies">Movies</Link>
+          </li>
 
-            <button className="signout" onClick={onClickLogout}>
-              Sign out
-            </button>
+          <li>
+            <Link to="/shows">Shows</Link>
+          </li>
 
-          </div> 
-        </div>
+          <li>
+            <Link to="/trend">TrendingMovie</Link>
+          </li>
+        </ul>
+
+        <button className="signout" onClick={onClickLogout}>
+          Sign out
+        </button>
 
       </nav>
     </div>
