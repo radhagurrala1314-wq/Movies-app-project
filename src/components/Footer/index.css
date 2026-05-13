@@ -1,0 +1,96 @@
+.footer_container {
+  background-color: black;
+  width: 100%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+
+}
+
+.icon_card {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.facebook,
+.instagram,
+.twitter,
+.youtube {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.footer_card {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.order_link {
+  list-style: none;
+  color: #a09a9a;
+  font-family: "Roboto";
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+}
+
+.order_link li {
+  margin-bottom: 12px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.footer_address{
+ 
+  color:#e5d6d6;
+  margin-top: 20px;
+  font-size: 14px;
+  font-family: "Roboto";
+  text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .footer_card {
+    gap: 40px;
+    text-align: center;
+  }
+
+  .icon_card {
+    gap: 20px;
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .footer_container {
+    padding: 25px 15px;
+  }
+
+  .footer_card {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .order_link {
+    text-align: center;
+  }
+
+  .icon_card {
+    gap: 18px;
+  }
+
+  .facebook,
+  .instagram,
+  .twitter,
+  .youtube {
+    width: 20px;
+    height: 20px;
+  }
+}

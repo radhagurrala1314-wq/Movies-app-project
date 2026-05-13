@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  background-color: #111;
+}
+.trending_head{
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Roboto";
+  margin-top: 40px;
+}
+.mylist-container {
+  min-height: 100vh;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.mylist-card {
+  width: 100%;
+  max-width: 900px;
+  background-color: #1f1f1f;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  gap: 25px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.mylist-image {
+  width: 320px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.mylist-content {
+  flex: 1;
+  color: white;
+}
+
+.mylist-title {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.mylist-plot {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #d1d1d1;
+  margin-bottom: 25px;
+}
+
+.mylist-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mylist-info p {
+  font-size: 18px;
+}
+
+.mylist-info span {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.loader-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .mylist-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mylist-image {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .mylist-title {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .mylist-plot {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .mylist-info p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .mylist-container {
+    padding: 15px;
+  }
+
+  .mylist-card {
+    padding: 18px;
+  }
+
+  .mylist-title {
+    font-size: 26px;
+  }
+
+  .mylist-plot {
+    font-size: 14px;
+  }
+
+  .mylist-info p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,41 @@
+.shows-page {
+  background-color: #141414;
+  min-height: 100vh;
+  padding: 40px 30px;
+  font-family: "Roboto";
+}
+
+.heading {
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.shows-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+}
+
+
+@media screen and (max-width: 992px) {
+  .shows-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .shows-page {
+    padding: 25px 15px;
+  }
+
+  .shows-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+}
